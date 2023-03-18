@@ -18,6 +18,17 @@ public class Claim {
         return claimId;
     }
 
+    public Claim() {
+    }
+
+    public Claim(String claimId, String claimNb, Status status, Date accidentDate, Date creationDate) {
+        this.claimId = claimId;
+        this.claimNb = claimNb;
+        this.status = status;
+        this.accidentDate = accidentDate;
+        this.creationDate = creationDate;
+    }
+
     public void setClaimId(String claimId) {
         this.claimId = claimId;
     }
