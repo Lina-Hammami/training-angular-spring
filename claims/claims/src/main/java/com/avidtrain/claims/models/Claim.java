@@ -3,11 +3,12 @@ package com.avidtrain.claims.models;
 import java.util.Date;
 
 public class Claim {
-    enum Status{
+    public enum Status{
         OPEN,
         EXPERTISE,
         CLOSED
     };
+
     private String claimId;
     private String claimNb;
     private Status status;
