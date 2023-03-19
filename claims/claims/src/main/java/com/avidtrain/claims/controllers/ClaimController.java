@@ -18,10 +18,10 @@ public class ClaimController {
     public List<Claim> getClaimsList(){
         return claimService.getClaims();
     }
-    @GetMapping("/{id}")
-    public Claim getClaim(@PathVariable("id") int claimId){
-        return claimService.getClaimById(claimId);
-    }
+//    @GetMapping("/{id}")
+//    public Claim getClaim(@PathVariable("id") int claimId){
+//        return claimService.getClaimById(claimId);
+//    }
     @PostMapping("/add/{id}")
     public void addClaim(Claim c)  {
         claimService.saveClaim();

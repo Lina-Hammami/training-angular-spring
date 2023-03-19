@@ -29,14 +29,14 @@ public class Claim {
     private Date accidentDate;
     private Date creationDate;
 
-    public String getClaimId() {
+    public Long getClaimId() {
         return claimId;
     }
 
     public Claim() {
     }
 
-    public Claim(String claimId, String claimNb, Status status, Date accidentDate, Date creationDate) {
+    public Claim(Long claimId, String claimNb, Status status, Date accidentDate, Date creationDate) {
         this.claimId = claimId;
         this.claimNb = claimNb;
         this.status = status;
@@ -44,7 +44,7 @@ public class Claim {
         this.creationDate = creationDate;
     }
 
-    public void setClaimId(String claimId) {
+    public void setClaimId(Long claimId) {
         this.claimId = claimId;
     }
 
