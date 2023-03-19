@@ -23,11 +23,18 @@ public class ClaimService {
     public List<Claim> getClaims(){
         return claimRepository.findAll();
     }
-//    public Claim getClaimById(int id) {
-//        return claimDummyList.get(id);
-//    }
-    public void saveClaim(){
+    public Claim getClaim(long id) {
+        return claimRepository.findById(id).orElse(null);
     }
-    public void removeClaim(){
+    public void addClaim(Claim claim){
+        claimRepository.save(claim);
+    }
+    public void deleteClaim(long id){
+        claimRepository.deleteById(id);
+    }
+
+    public void updateClaim(Claim claim, long id) {
+        // TODO: fix it
+        claimRepository.save(claim);
     }
 }
