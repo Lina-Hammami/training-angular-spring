@@ -23,7 +23,7 @@ public class Claim {
             strategy = SEQUENCE,
             generator = "claim_sequence"
     )
-    private String claimId;
+    private Long claimId;
     private String claimNb;
     private Status status;
     private Date accidentDate;
