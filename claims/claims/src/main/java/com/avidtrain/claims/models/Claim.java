@@ -1,14 +1,28 @@
 package com.avidtrain.claims.models;
 
+import javax.persistence.*;
 import java.util.Date;
 
+import static javax.persistence.GenerationType.SEQUENCE;
+
+@Entity
+@Table(name = "claims")
 public class Claim {
     public enum Status{
         OPEN,
         EXPERTISE,
         CLOSED
     };
-
+    @Id
+    @SequenceGenerator(
+            name = "claim_sequence",
+            sequenceName = "claim_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = SEQUENCE,
+            generator = "claim_sequence"
+    )
     private String claimId;
     private String claimNb;
     private Status status;
